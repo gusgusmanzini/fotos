@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #e31b23;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* .heart-mask {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 90C50 90 85 65 85 40C85 15 60 15 50 30C40 15 15 15 15 40C15 65 50 90 50 90Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 90C50 90 85 65 85 40C85 15 60 15 50 30C40 15 15 15 15 40C15 65 50 90 50 90Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  } */
+  
+  .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .message {
+     text-align: center;
+    color: #ff4136;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; 
+  }
+  
+  .heart-icon {
+    margin-right: 10px;
+    fill: #ff4136;
+  }
+  
+  @media (max-width: 1200px) {
+    .photo-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .photo-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .photo-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .photo-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
